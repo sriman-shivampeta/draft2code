@@ -1,61 +1,108 @@
-.about_content_skills ul li {
-    display: block !important;
-    margin: 1% 0% !important;
+﻿.about1{
+    height: 800px;
+    background-color: #fff;
+    padding:5% 0%;
+    /*background-image:url("../images/todo-work-illustration.jpg");
+    background-size:cover;*/
 }
 
-.about_content {
-    text-align: justify;
-    font-size: 1.2em;
-    line-height: 2em;
+.about1_mainheading {
+    width: 10%;
+    margin: 0 auto;
 }
 
-.about_heading {
-    text-align: center;
-    font-size: 2.2em;
-    padding: 1em;
+.about_logo{
+    padding:20% 10%;
 }
 
-
-#bio, #skill, #exp {
-    width: 100%;
+.about2{
     height: auto;
-    position: relative;
-    /*-webkit-animation: aniright 0.3s ease-in-out;
-    -moz-animation: aniright 0.3s ease-in-out;
-    animation: aniright 0.3s ease-in-out;*/
+    background-color: #df5757;
+    padding:5% 0%;
 }
 
-@-webkit-keyframes aniright {
-  0%   { right: -100px; }
-  100% { right: 0; }
+.about2_mainheading {
+    width: 10%;
+    margin: 0 auto;
+    color:#fff;
 }
 
-@-moz-keyframes aniright {
-  0%   { right: -100px; }
-  100% { right: 0; }
+.myworks{
+    padding: 5% 0%;
+}
+.overlay{
+    color:white;
+}
+.overlay img{
+    background-color:#6c6c6c;
+    box-shadow: 0px 0px 7px black;
+    border-radius: 100px;
 }
 
-@keyframes aniright {
-  0%   { right: -100px; }
-  100% { right: 0; }
+.worksimg img{
+    width:200px;
 }
 
-.skills_tab {
-    margin-bottom: 5%;
+.overlay:hover{
+    color:black;
+    opacity:0.8;
 }
 
-    .skills_tab ul li {
-        display: inline-block;
-        margin: 0% 3%;
-        font-size: 1.3em;
-        cursor:pointer;
-    }
-
-.about_imgs p {
-    text-align: center;
-    margin-top: 1%;
+.aboutmeskills li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 25px;
+    color: #333;
+    cursor:pointer;
+    margin:5%;
 }
 
-.resume {
-    color: #f10027 !important;    
+.aboutmeskills li a{
+    text-decoration: none;
+    padding: 2%;
+    color:black;
+    border-bottom: 2px solid;
+    transition:0.2s ease-in-out;
 }
+
+.aboutmeskills li a:hover,.aboutmeskills li a:focus {
+    color:#C1272D;
+    border-bottom: 10px solid;
+}
+
+.sg_name{
+    font-size:20px;
+}
+.skill_bar{
+    background-color:transparent;
+    height:15px;
+    border:2px solid;
+    width:100%;
+}
+.skill_bar_progress {
+    background-color:#C1272D;
+    height:11px;
+}
+
+.html{width:90%;animation-name: html;animation-duration: 4s;}
+.css{width:95%;animation-name: css;animation-duration: 4s;}
+.bootstrap{width:90%;animation-name: bootstrap;animation-duration: 4s;}
+.jquery{width:85%;animation-name: jquery;animation-duration: 4s;}
+.javascript{width:87%;animation-name: javascript;animation-duration: 4s;}
+.angularjs{width:65%;animation-name: angularjs;animation-duration: 4s;}
+.dw{width:85%;animation-name: dw;animation-duration: 4s;}
+.ps{width:87%;animation-name: ps;animation-duration: 4s;}
+.il{width:89%;animation-name: il;animation-duration: 4s;}
+
+
+/* Standard syntax */
+@keyframes html {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:90%;}}
+@keyframes css {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:95%;}}
+@keyframes bootstrap {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:90%;}}
+@keyframes jquery {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:85%;}}
+@keyframes javascript {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:87%;}}
+@keyframes angularjs {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:65%;}}
+@keyframes dw {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:85%;}}
+@keyframes ps {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:87%;}}
+@keyframes il {0%{background-color:#ff4949; width:0%;}100% {background-color:#C1272D;  width:89%;}}
+

@@ -1,0 +1,216 @@
+@font-face {
+    font-family: Folks_Bold;
+	src: url('../fonts/Folks_Bold.ttf');
+}
+@font-face {
+    font-family: Folks_Light;
+	src: url('../fonts/Folks_Light.ttf');
+}
+@font-face {
+    font-family: Folks_Normal;
+	src: url('../fonts/Folks_Normal.ttf');
+}
+@font-face {
+	font-family: NEON CLUB MUSIC_medium;
+	src: url('../fonts/NEON CLUB MUSIC_medium.otf');
+}
+@font-face {
+	font-family: Diavlo_MEDIUM;
+	src: url('../fonts/Diavlo_MEDIUM.otf');
+}
+@font-face {
+	font-family: NEON CLUB MUSIC_bold;
+	src: url('../fonts/NEON CLUB MUSIC_bold.otf');
+}
+
+body{
+	position: relative;	
+	cursor: url(../imgs/cs.png), default;
+	overflow-x: hidden;
+}
+.container{
+	text-align: center;	
+}
+.disable-selection {
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer */
+	-khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+	-webkit-user-select: none; /* Chrome, Safari, and Opera */
+	-webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+.enterbutton {
+	text-align: center;
+	width: 210px;
+	background: #eecda3;
+	background: -moz-linear-gradient(-45deg, #eecda3 0%, #ed97bb 50%, #eecda3 100%);
+	background: -webkit-linear-gradient(-45deg, #eecda3 0%,#ed97bb 50%,#eecda3 100%);
+	background: linear-gradient(135deg, #eecda3 0%,#ed97bb 50%,#eecda3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', endColorstr='#eecda3',GradientType=1 );
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 120px;
+	border: 3px solid #CE4545;
+	height: 50px;
+	font-size: 30px;
+	color: black;
+	font-family: Folks_Bold;
+}
+
+.enterbutton:hover{
+	box-shadow:0px 0px 15px;
+	transition: all 0.45s;
+}
+a{
+	cursor: url(../imgs/cs1.png), default;
+}
+
+.text1 {
+	font-size: 100px;
+	font-family: NEON CLUB MUSIC_medium;
+	text-align: center;
+	position: relative;
+	margin-top: 180px;
+}
+.text2 {
+	font-size: 150px;
+	font-family: NEON CLUB MUSIC_medium;
+	text-align: center;
+	position: relative;
+}
+.mainpage {height: 650px;}
+#page1{	height: 650px;}
+#page2{	height: auto;}
+#page3{	height: 700px;}
+
+.aboutmepage{margin-top: 100px;}
+.workspage{margin-top: 80px;}
+.contactpage{margin-top: 100px;}
+
+.alefthead {
+	font-size: 25px;
+	text-align: center;
+}
+.arighthead {
+	font-size: 25px;
+	text-align: center;
+}
+.wlefthead {
+	font-size: 25px;
+	text-align: center;
+}
+.wrighthead {
+	font-size: 25px;
+	text-align: center;
+}
+.aleft{
+	text-align:left;
+	font-family:Diavlo_MEDIUM;
+	font-size:22px;
+}
+.aright{
+	font-family:Diavlo_MEDIUM;
+	font-size:22px;
+}
+
+.wleft{
+	text-align:left;
+	font-family:Diavlo_MEDIUM;
+	font-size:22px;
+}
+.wright{
+	font-family:Diavlo_MEDIUM;
+	font-size:22px;
+}
+hr { margin-top: 10px !important;margin-bottom: 30px !important;border: 0px;border-top: 2px solid #000 !important;	width: 370px !important;}
+
+.progress-bar {background-color: #f38888 !important;}
+
+#nav0{
+	font-family: Diavlo_MEDIUM;
+	margin: 0 auto;
+	box-shadow: 0px -1px 10px gray;
+	background: url(../imgs/bg1.gif);
+	opacity: 1;
+}
+
+.logo2 {
+	float: left;
+	padding: 10px;
+	font-family: NEON CLUB MUSIC_bold;
+	font-size: 20px;
+	margin-left: 30px;
+	margin-top: 4px;
+}
+.logo2:hover {
+	border: 1px solid black;
+}
+
+.nav_menu {
+	line-height: 30px;
+	padding-top: 18px;
+	margin-right: 11.75%;
+}
+ul li{
+	display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+}
+ul li:hover{	
+	background: #CE4545;
+	opacity: 0.5;
+}
+
+a{
+	padding: 55px;
+    color: black !important;
+	text-decoration: none !important;
+	width: 100%;	
+}
+a:hover{
+    color: white !important;
+}
+a:focus {
+	color: white !important;
+	outline-offset: -150px !important;
+}
+
+.row.row1 {
+	margin-left: -70px !important;
+}
+
+img.a117{
+	width: 200px;
+	height:117px;
+}
+
+.footer {
+  padding: 1rem;
+  background: url(../imgs/bg1.gif);
+  text-align: center;
+  z-index: -99;
+  box-shadow: 0px 3px 7px gray;
+  font-size: 17px;
+}
+
+
+img.f1{
+}
+img.f1:hover{
+background-image: url(../images/gdfolderhover.svg);
+}
+
+img.f2{
+}
+img.f2:hover{
+background-image: url(../images/uifolderhover.svg);
+}
+
+.c1 {
+	z-index: -1;
+	position: fixed;
+	margin: -128px 0px 0px 0px;
+	opacity: 0.2;
+}

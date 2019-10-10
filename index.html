@@ -1,95 +1,339 @@
 ﻿<!DOCTYPE html>
-<html ng-app="draft">
+<html ng-app="d2c">
 <head>
+    <meta charset="utf-8" />
+    <title>DRAFT2CODE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" href="favicon.png">
+    <meta name="Description" content="Portfolio of Sriman -UX-UI / Web Designer & Developer">
+    <meta name="Keywords" content="Design, Development, PSD to Website,HTML5, CSS3, Bootstrap, AngularJS, Ionic Frameworks, Logos">
 
-    <title> DRAFT2CODE | UI/UX Designer &amp; Front-end Developer </title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <meta name="description" content="I'm a UI/UX Designer and Front End Developer with passionate about communication and human interaction putting user in the center and create innovative and intuitive design to development." />
-    <meta name="keywords" content="Design, Development, Website, UI, UX, User Interface, User Experience, HTML5, CSS3, Bootstrap, AngularJS, Wordpress, Code Debugging, Freelance, PSD to HTML, Responsive" />
-    <meta name="Author" content="draft2code.com" />
+    <link data-require="bootstrap-css@*" data-semver="3.3.2" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.css" />
 
-
-    <link rel="stylesheet" href="css/main.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <link href="css/3.3.7_bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <link href="css/animate.css" rel="stylesheet" />
-    <link href="css/lightbox.min.css" rel="stylesheet" />
-    <link href="css/notes.css" rel="stylesheet" />
+
+    <!--FavIcon-->
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link href="css/pace.css" rel="stylesheet" />
+
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/homedesign.css" rel="stylesheet" />
+    <link href="css/about.css" rel="stylesheet" />
+    <link href="css/works.css" rel="stylesheet" />
+    <link href="css/blog.css" rel="stylesheet" />
+    <link href="css/contact.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
 
 
 </head>
 <body ng-controller="MainCtrl">
 
-    <header class="header_row">
-        <div class="col-lg-12 text-center">
-            <a class="draft_header" href="http://www.draft2code.com/">
-                <!--<span>Draft</span>-->
-                <img src="images/dc_logo.png" class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4 img-responsive"/>
-            </a>
-        </div>
-    </header>
-
-    <div class="container_width">
-
-        <hr />
-
-        <div class="row">
-            <div class="d_menu col-lg-2 col-md-2 col-sm-2">
-                <ul>
-                    <li ng-class="{active: $route.current.activetab == '/'}"><a id="anileftmenu1" class="topbar_slide" ng-class="{ active: activePath=='/' }" href="#/">Works</a></li>
-                    <li ng-class="{active: $route.current.activetab == '/about'}"><a id="anileftmenu2" class="topbar_slide" ng-class="{ active: activePath=='/about' }" href="#/about">About</a></li>
-                    <li ng-class="{active: $route.current.activetab == '/contact'}"><a id="anileftmenu3" class="topbar_slide" ng-class="{ active: activePath=='/contact' }" href="#/contact">Contact</a></li>
-                    <!--<li ng-class="{active: $route.current.activetab == '/notes'}"><a id="anileftmenu3" class="topbar_slide" ng-class="{ active: activePath=='/notes' }" href="#/notes">Notes</a></li>-->
-                </ul>
-
-            </div>
-
-            <div class="d_menu col-lg-0 col-md-0 col-sm-0" style="padding-right:30px; border-right: 1px solid #ccc;">
-            </div>
-
-            <div class="col-lg-9 col-md-9 col-sm-9">
-                <div ng-view></div>
-            </div>
-
-        </div>
+    <div class="mobilenav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
     </div>
 
+    <a href="javascript:void(0)" class="icon">
+        <div class="hamburger">
+            <div class="menui top-menu"></div>
+            <div class="menui mid-menu"></div>
+            <div class="menui bottom-menu"></div>
+        </div>
+    </a>
+
+    
+     <!--<p>Hello {{name}}!</p>-->
+
+    <section class="home fadeIn animated" id="home">
+        <img src="../imgs/1.png" alt="c1" class="c1 hvr-sink" />
+        <div id="scene">
+            <ul>
+                <li class="layer" data-depth="0.00"><img src="../imgs/p/1.png" alt="1" class="p1" /></li>
+                <li class="layer" data-depth="0.40"><img src="../imgs/p/2.png" alt="2" class="p2" /></li>
+                <li class="layer" data-depth="0.50"><img src="../imgs/p/3.png" alt="3" class="p3" /></li>
+                <li class="layer" data-depth="0.60"><img src="../imgs/p/4.png" alt="4" class="p4" /></li>
+                <li class="layer" data-depth="0.70"><img src="../imgs/p/5.png" alt="5" class="p5" /></li>
+                <li class="layer" data-depth="0.80"><img src="../imgs/p/6.png" alt="6" class="p6" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/7.png" alt="7" class="p7" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/8.png" alt="8" class="p8" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/9.png" alt="9" class="p9" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/10.png" alt="10" class="p10" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/11.png" alt="11" class="p11" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/12.png" alt="12" class="p12" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/13.png" alt="13" class="p13" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/14.png" alt="14" class="p14" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/15.png" alt="15" class="p15" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/16.png" alt="16" class="p16" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/17.png" alt="17" class="p17" /></li>
+                <li class="layer" data-depth="0.20"><img src="../imgs/p/18.png" alt="18" class="p18" /></li>
+            </ul>
+        </div>
+
+        
+    </section>
+
+    <a class="navbar-brand" href="index.html">
+        <img src="images/dc_logo.png" />
+    </a>
+        <a href="#contact" class="home_contact_btn waves-effect waves-light btn">CONTACT ME</a>
+    
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <section class="about1" id="about">
+        <h4 class="about1_mainheading">WHO AM I</h4>
 
-    <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
-    <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
-    <script src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
-    <script src="https://code.angularjs.org/1.5.8/angular-sanitize.min.js"></script>
+        <div class="container">
+            <div class="col-md-6">
+                <div class="aboutmeskills">
+                    <ul class="aboutmeskills_tabs">
+                        <li><a href ng-click="bio()">Bio</a></li>
+                        <li><a href ng-click="skills()">Skills</a></li>
+                        <li><a href ng-click="exp()">Experience</a></li>
+                    </ul>
+                </div>
 
-    <script src="js/lightbox-plus-jquery.min.js"></script>
+                <div class="bio_group fadeIn animated" ng-show="showbio">
+                    <p class="sg_name"></p>
 
+                </div>
 
-    <!--<script src="//code.angularjs.org/1.2.26/angular.js"></script>  
-    <script src="https://code.angularjs.org/1.2.26/angular-route.min.js"></script>-->
-    <script src="js/controller.js"></script>
-    <script src="js/route.js"></script>
-    <!--<script src="js/module.js"></script>-->
-    <script src="js/notes.js"></script>
-    <script src="js/notespageController.js"></script>
+                <div class="skills_group fadeIn animated" ng-show="showskills">
+                    <div class="row">
+                        <div class="col-md-6 sg_name">HTML5</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress html"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 sg_name">CSS3</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress css"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 sg_name">Bootstrap</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress bootstrap"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 sg_name">JQuery</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress jquery"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 sg_name">Javascript</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress javascript"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 sg_name">AngularJS</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress angularjs"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 sg_name">Adobe Dreamweaver CS6</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress dw"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 sg_name">Adobe Photoshop CS6</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress ps"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 sg_name">Adobe Illustrator CS6</div>
+                        <div class="col-md-6"><div class="skill_bar"><div class="skill_bar_progress il"></div></div></div>
+                    </div>
+                </div>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90903940-1"></script>
+                <div class="exp_group fadeIn animated" ng-show="showexp">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="col-md-6 " data-aos="fade-down-left" data-aos-offset="500" data-aos-duration="500" data-aos-easing="ease-in-sine">
+                <img src="imgs/about-page-logo.png" class="about_logo"/>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about2" id="">
+        <h4 class="about2_mainheading">WHAT I DO</h4>
+
+        <div class="container myworks">
+            <div class="row text-center">
+                <div class="col-md-3 worksimg" data-aos="fade-right" data-aos-offset="200" data-aos-duration="300" data-aos-easing="ease-in-sine">
+                    <div class="overlay">
+                        <img src="imgs/works/illustration.png" />
+                        <h5>Illustrator</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 worksimg" data-aos="flip-left" data-aos-offset="200" data-aos-duration="300" data-aos-easing="ease-in-sine">
+                    <div class="overlay">
+                        <img src="imgs/works/webdevelopment.png" />
+                        <h5>Web Development</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 worksimg" data-aos="flip-right" data-aos-offset="200" data-aos-duration="300" data-aos-easing="ease-in-sine">
+                    <div class="overlay">
+                        <img src="imgs/works/responsive.png" />
+                        <h5>Responsive</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 worksimg" data-aos="fade-left" data-aos-offset="200" data-aos-duration="300" data-aos-easing="ease-in-sine">
+                    <div class="overlay">
+                        <img src="imgs/works/psdtoweb.png" />
+                        <h5>PSD to WEB CODE</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="works" id="works">
+        <h4 class="works_mainheading">THESE ARE MY WORKS</h4>
+      
+            <div class="container works_mainheading_tabs">
+
+                <div class="gal_tabs">
+                    <ul class="gal_ul_tabs">
+                        <a class="waves-effect waves-ripple" href ng-click="myFilter = null"><b>All</b></a>
+                        <a class="waves-effect waves-ripple" href ng-click="myFilter = {graphic: 1}"><b>Graphics</b></a>
+                        <a class="waves-effect waves-ripple" href ng-click="myFilter = {website: 2}"><b>Websites</b></a>
+                        <!-- multiple filter - not working -->
+                        <!--<span ng-click="myFilter = [{type: 1}, {type:3}]">Types 1 & 3</span>-->
+                    </ul>
+                </div>
+
+                <div class="container-fluid">
+                        <div class="col_class col-lg-3" data-aos="zoom-in-down" ng-repeat="work in works | filter:myFilter">
+                            <div class="hovereffect fadeIn animated">
+                                <img class="img-responsive" ng-src="{{work.thumbnail}}" alt="{{work.name}}" />
+                                <div class="overlay">
+                                    <h2>{{work.name}}</h2>
+                                    <a class="info" ng-href="{{work.url}}">Preview</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+    </div>
+
+    </section>
+
+    <!--
+        
+    
+    <section class="blog" id="blog">
+        <p class="blog_mainheading">MY BLOG</p>
+
+    </section>
+-->
+
+    <section class="contact" id="contact">
+        <h4 class="contact_mainheading">LET’S GET IN TOUCH</h4>
+
+        <div class="container contact_form">
+            <div class="row">
+
+                <form class="col s12" action="sample.php" method="POST">
+                    <div class="row">
+                        <div class="input-field col s8 offset-s2">
+                            <input  name="name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8 offset-s2">
+                            <input name="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8 offset-s2">
+                            <input name="phone" type="text" class="validate">
+                            <label for="phone">Phone</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8 offset-s2">
+                            <input id="mess" name="mess" type="text" class="validate">
+                            <label for="message">Message</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s8 offset-s2">
+                            <button class="waves-effect waves-light btn" type="submit" value="submit">Send</button>
+                            <button class="waves-effect waves-light btn" type="reset" value="reset">Reset</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script data-require="angular.js@1.3.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js" data-semver="1.3.13"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script data-require="ui-bootstrap@0.5.0" data-semver="0.5.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/parallax.min.js"></script>
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <!--Page Loader-->
+    <script src="js/pace.min.js"></script>
+
+    <!--http://michalsnik.github.io/aos/-->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        gtag('config', 'UA-90903940-1');
+  ga('create', 'UA-90903940-1', 'auto');
+  ga('send', 'pageview');
+
     </script>
 
+    <!--<script type="text/javascript">
+$(document).ready(function () {
+    //Disable cut copy paste
+    $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+    });
+
+    //Disable mouse right click
+    $("body").on("contextmenu",function(e){
+        return false;
+    });
+});
+    </script>-->
 
 
 </body>
