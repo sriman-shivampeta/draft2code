@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html ng-app="draft">
+<head>
+    <title>Notes</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Services Keywords" />
+    <meta name="description" content="description about the website" />
+    <meta name="author" content="http://www.draft2code.com/" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/lightbox.min.css" rel="stylesheet" />
+    <link href="css/notes.css" rel="stylesheet" />
+
+
+    <link href="all/pgwithfilter/pgwithfilter.css" rel="stylesheet" />
+    <!--Notes-->
+
+    <link href="all/imagelightbox/lightbox.css" rel="stylesheet" />
+    <link href="all/popup_image/popup_image.css" rel="stylesheet" />
+    <link href="all/image_gallery/image_gallery.css" rel="stylesheet" />
+
+
+</head>
+<body ng-controller="MainCtrl">
+
+    <header class="header_row">
+        <div class="col-lg-12 text-center">
+            <a class="draft_header" href="#/index">
+                <span>Draft</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="container_width">
+
+        <hr />
+
+        <div class="row">
+            <div class="d_menu col-lg-2 col-md-2 col-sm-2">
+                <ul>
+                    <li><a id="anileftmenu1" class="topbar_slide" href="http://www.draft2code.com/#/">Home</a></li>
+                    
+                    <li ng-class="{active: $route.current.activetab == '/lightbox_'}"><a class="topbar_slide" ng-class="{ active: activePath=='/lightbox_' }" href="#/lightbox_">Light Box Image</a></li>
+
+                    <li ng-class="{active: $route.current.activetab == '/popup_image'}"><a class="topbar_slide" ng-class="{ active: activePath=='/popup_image' }" href="#/popup_image">Popup Image With Text</a></li>
+
+                    <li ng-class="{active: $route.current.activetab == '/image_gallery'}"><a class="topbar_slide" ng-class="{ active: activePath=='/image_gallery' }" href="#/image_gallery">Image Gallery With Text</a></li>
+
+                    <li ng-class="{active: $route.current.activetab == '/mdba'}"><a class="topbar_slide" ng-class="{ active: activePath=='/mdba' }" href="#/mdba">MongoDB Using JavaScript and PHP</a></li>
+
+                    <li ng-class="{active: $route.current.activetab == '/pgwithfilter'}"><a class="topbar_slide" ng-class="{ active: activePath=='/pgwithfilter' }" href="#/pgwithfilter">Portfolio Gallery with filtering</a></li>
+
+                    <li ng-class="{active: $route.current.activetab == '/apiud'}"><a class="topbar_slide" ng-class="{ active: activePath=='/apiud' }" href="#/apiud">AngularJS & PHP (Insert,Update,Delete)</a></li>
+
+                    <li ng-class="{active: $route.current.activetab == '/ctmlaburobo'}"><a class="topbar_slide" ng-class="{ active: activePath=='/ctmlaburobo' }" href="#/ctmlaburobo">Connection to MongoDB mlab using Robomongo</a></li>
+
+                    <li ng-class="{active: $route.current.activetab == '/isuUsingmDbPhp'}"><a class="topbar_slide" ng-class="{ active: activePath=='/isuUsingmDbPhp' }" href="#/isuUsingmDbPhp">Insert-Show-and-Update-Using-MongoDB-and-Php</a></li>
+
+
+                    
+                    <!--<li ng-class="{active: $route.current.activetab == '/about'}"><a id="anileftmenu2" class="topbar_slide" ng-class="{ active: activePath=='/about' }" href="#/about">About</a></li>-->
+                    <!--<li ng-class="{active: $route.current.activetab == '/contact'}"><a id="anileftmenu3" class="topbar_slide" ng-class="{ active: activePath=='/contact' }" href="#/contact">Contact</a></li>-->
+                    <!--<li ng-class="{active: $route.current.activetab == '/notes'}"><a id="anileftmenu3" class="topbar_slide" ng-class="{ active: activePath=='/notes' }" href="#/notes">Notes</a></li>-->
+                </ul>
+
+            </div>
+
+
+
+            <div class="col-lg-10 col-md-10 col-sm-10">
+                <div ng-view></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-sanitize.min.js"></script>
+
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+
+
+    <!--<script src="//code.angularjs.org/1.2.26/angular.js"></script>  
+    <script src="https://code.angularjs.org/1.2.26/angular-route.min.js"></script>-->
+    <script src="js/controller.js"></script>
+    <script src="js/route.js"></script>
+
+    <script src="all/imagelightbox/lightbox.js"></script>
+    <script src="all/popup_image/popup_image.js"></script>
+    <script src="all/image_gallery/image_gallery.js"></script>
+    <!--<script src="all/mdbusingAng/mdba.js"></script>-->
+
+
+
+
+    <!--<script src="js/module.js"></script>-->
+    <script src="js/notes.js"></script>
+    <script src="js/notespageController.js"></script>
+</body>
+</html>

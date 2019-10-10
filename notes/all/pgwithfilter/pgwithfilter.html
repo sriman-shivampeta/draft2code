@@ -1,0 +1,60 @@
+﻿
+
+<div class="container_width">
+    {{mess}}
+
+
+    <section class="container_width tabs" ng-controller="pgwithfilterCtrl as slide">
+        <ul>
+            <li ng-class="{w_active: slide.isSelected(1) }">
+                <a href ng-click="slide.selectTab(1)">All</a>
+            </li> |
+            <li ng-class="{w_active: slide.isSelected(2) }">
+                <a href ng-click="slide.selectTab(2)">Graphics</a>
+            </li> |
+            <li ng-class="{w_active: slide.isSelected(3) }">
+                <a href ng-click="slide.selectTab(3)">Websites</a>
+            </li>
+        </ul>
+        <br />
+
+        <div class="row" ng-show="slide.isSelected(1)">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-repeat="all in pgwithfilters_json.all">
+                <div>
+                    <a class="example-image-link" data-lightbox="example-1" title="{{all.title}}" ng-href="{{all.all_link}}">
+                        <img class="img_effect example-image col-md-12" id="gal_top" alt="" ng-src="../imgs/pic/{{all.all_preview}}" style="padding-top:10%;">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row" ng-show="slide.isSelected(2)">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-repeat="image in pgwithfilters_json.images">
+                <a class="example-image-link" data-lightbox="example-1" title="{{image.title}}" ng-href="{{image.img_link}}">
+                    <img class="img_effect example-image col-md-12" id="gal_top" alt="" ng-src="../imgs/pic/{{image.img_preview}}">
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row" ng-show="slide.isSelected(3)">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-repeat="webs in pgwithfilters_json.websites">
+                <a class="example-image-link" data-lightbox="example-1" title="{{webs.title}}" ng-href="{{webs.web_link}}">
+                    <img class="img_effect example-image col-md-12" id="gal_top" alt="" ng-src="../imgs/pic/{{webs.all_preview}}">
+                    <p><a href ng-href="{{webs.url_}}">Open</a></p>
+                </a>
+            </div>
+
+
+
+
+        </div><br />
+
+    </section>
+
+
+</div>

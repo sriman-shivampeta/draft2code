@@ -1,0 +1,22 @@
+﻿
+#gal_top {
+    position: relative;
+    -webkit-animation: anitop 0.7s;
+    -moz-animation: anitop 0.7s;
+    animation: anitop 0.7s;
+}
+
+@-webkit-keyframes anitop {
+  0%   { top: -100px;opacity:0; }
+  100% { top: 0;opacity:1; }
+}
+
+@-moz-keyframes anitop {
+  0%   { top: -100px;opacity:0; }
+  100% { top: 0;opacity:1; }
+}
+
+@keyframes anitop {
+  0%   { top: -100px;opacity:0 }
+  100% { top: 0;opacity:1 }
+}

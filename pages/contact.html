@@ -1,97 +1,33 @@
-<link href="../css/contact.css" rel="stylesheet" />
+﻿<link href="../css/contact.css" rel="stylesheet" />
+<script src="../js/savedata.js"></script>
 
-<style>
+<div class="container_width">
+    <div class="row d_contact_row">
+        <p class="col-md-12">email: iamsriman2389@gmail.com</p>
+        <p class="col-md-12">phone: +91-99496 98981</p>
+    </div>
 
-</style>
-<div class="container fadeIn animated">
-    <!--<h1>Contact Page</h1>
-
-    <p>{{ message }}</p>-->
-
-<div class="contact" style="margin-top:10%;" ng-controller="cntrl">
-    <!--<form>
-        Name: <input type="text" ng-model="name" name="name">
-        Email: <input type="text" ng-model="email" name="email">
-        Message: <input type="text" ng-model="mess" name="mess">
-        Phone: <input type="text" ng-model="mob" name="mob">
-        <input type="button" value="{{btnName}}" ng-click="insertdata()">
-        {{msg}}
-
-    </form>-->
-
-    <form name="conForm" action="?" method="POST" class="elegant-aero" novalidate required>
-
-        <p>
-            <label>First Name:</label><br>
-            <input type="text" name="user" ng-model="name" required>
-            <span style="color:red" ng-show="conForm.user.$dirty && conForm.user.$invalid">
-                <span ng-show="conForm.user.$error.required">Username is required.</span>
-            </span>
+    <div class="row d_contact_row">
+        <p class="col-md-11">
+            <a href="https://www.facebook.com/sriman.bhai"><img class="fb" src="../imgs/fb.png" /></a> |
+            <a href=""><img class="in" src="../imgs/in.png" /></a> |
+            <a href="https://www.linkedin.com/in/sriman-narayana-shivampeta-02927964/"><img class="li" src="../imgs/li.png" /></a>
         </p>
+    </div>
 
-        <p>
-            <label>Email Address:</label><br>
-            <input type="email" name="email" ng-model="email" required>
-            <span style="color:red" ng-show="conForm.email.$dirty && conForm.email.$invalid">
-                <span ng-show="conForm.email.$error.required">Email is required.</span>
-                <span ng-show="conForm.email.$error.email">Invalid email address.</span>
-            </span>
-        </p>
 
-        <p>
-            <label>User Message:</label>
-            <textarea type="text" name="mess" class="form-control" rows="4" ng-model="mess" ng-minlength="5" ng-maxlength="100" required></textarea>
-            <span style="color:red" ng-show="conForm.mess.$dirty && conForm.mess.$invalid">
-                <span ng-show="conForm.mess.$error.required">Message is required.</span>
-                <span ng-show="conForm.mess.$error.mess">Invalid email address.</span>
-                <span ng-minlength="minlength">Message must be over 10 characters</span>
-                <span ng-maxlength="maxlength">Message must not exceed 100 characters</span>
-            </span>
-        </p>
 
-        <p>
-            <label>Phone Number:</label>
-            <input type="text" name="mob" ng-model="mob" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" ng-minlength="10" ng-maxlength="10" required />
-            <span style="color:red" ng-show="conForm.mob.$dirty && conForm.mob.$invalid">
-                <span ng-show="conForm.mob.$error.required">This field is required</span>
-                <span ng-pattern="conForm.mob.$error.mob">Must be a valid 10 digit phone number</span>
-            </span>
-        </p>
+    <form class="row d_contact_row_form" id="add-data">
 
-        <button class="submit_btn" type="button" ng-click="insertdata()" >{{btnName}}</button>
-        <br />
-        {{msg}}
+        <div class="form-group">
+            <input class="col-md-12 form-control" id="name" type="text" placeholder="Name" />
+            <input class="col-md-12 form-control" id="phone" type="number" placeholder="Phone" />
+            <input class="col-md-12 form-control" id="email" type="email" placeholder="Email" />
+            <textarea class="col-md-12 form-control" id="message" placeholder="Message"></textarea>
+        </div>
 
+        <button type="submit" name="submit" value="add_data">Send Message</button>
 
     </form>
 
-    <!--Table Preview-->
-   
-    <!--<table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Mess</th>
-                <th>Mob</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="contact in data">
-                <td>{{contact.conid}}</td>
-                <td>{{contact.conname}}</td>
-                <td>{{contact.conemail}}</td>
-                <td>{{contact.conmess}}</td>
-                <td>{{contact.conmob}}</td>
-                <td><button ng-click="deleteStud(contact.conid);">Delete</button></td>
-                <td><button ng-click="editStud(contact.conid, contact.conname);">Edit</button></td>
-
-            </tr>
-        </tbody>
-    </table>-->
- 
 </div>
-  
-</div>
-

@@ -1,0 +1,205 @@
+﻿<link href="mdba.css" rel="stylesheet" />
+
+
+<div class="container_width" ng-controller="mdbaCtrl">
+    <h2>Mongo Lab</h2>
+    <br />
+
+    <hr />
+
+
+    <h3>Using JavaScript to send data to mlab.</h3>
+    <br />
+
+    <p> Before creating an application using mongodb and angularjs, create an account in mlab with the free given data. </p>
+
+    <p>Here we used the url path " <b>url: "https://api.mlab.com/api/1/databases/srimandb/collections/sam?apiKey=511i2fMnEj2hNOlymaLpCLtDk-1G-NMx",</b> " to send and get the data from the mlab.</p>
+
+    <div><button class="btn btn-primary" ng-click="OpenmdbaWindow()">MongoDB Using AngularJS</button></div>
+
+    <div class="code">
+        <h4><b>Step-1 : Create an html file (index.html)</b></h4>
+        <xmp>
+<body onload="getBooks()">
+    <div class="container">
+        <h3>Add New Book</h3>
+        <form id="add-book">
+            <div class="form-group">
+                <label>Book Title</label>
+                <input type="number" id="title" class="form-control">
+                <label>Book Sample</label>
+                <input type="text" id="samp" class="form-control">
+            </div>
+
+            <input type="submit" name="submit" value="Add Book" class="btn btn-primary">
+        </form>
+
+        <br />
+
+        <div class="row">
+            <div id="books">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="mdba.js"></script>
+</body>
+        </xmp>
+
+
+        <h4><b>Step-2 : Create an JavaScript file (mdba.js)</b></h4>
+
+        <xmp>
+$(document).ready(function () {
+$('#add-book').on('submit', function(e){
+e.preventDefault();
+var title = $('#title').val();
+var samp = $('#samp').val();
+
+$.ajax({
+url: "https://api.mlab.com/api/1/databases/srimandb/collections/sam?apiKey=511i2fMnEj2hNOlymaLpCLtDk-1G-NMx",
+data: JSON.stringify({
+"title": title,
+"samp":samp
+}),
+type: "POST",
+contentType: "application/json",
+success: function(data){
+window.location.href="index.html"
+},
+error: function(xhr, status, err){
+console.log(err);
+}
+
+});
+});
+});
+
+function getBooks(){
+$.ajax({
+url: "https://api.mlab.com/api/1/databases/srimandb/collections/sam?apiKey=511i2fMnEj2hNOlymaLpCLtDk-1G-NMx"
+}).done(function(data){
+var output = '<div>';
+
+    output += '<div class"well">';
+        output += '<table>';
+            output += '<thead>';
+                output += '<tr>';
+                    output += '<th> Book Title </th>';
+                    output += '<th> Book Sample </th>';
+                    output += '<tr>';
+                    output += '</thead>';
+            output += '<tbody>';
+                output += '<tr>';
+                    $.each(data, function (key, data) {
+                    output += '<tr>';
+                    output += '<td>' + data.title + '</td>';
+                    output += '<td>' + data.samp + '</td>';
+                    output += '</tr>';
+                });
+                output += '</tr>';
+                output += '</tbody>';
+            output += '</table>';
+        output += '</div>';
+
+
+    $('#books').html(output);
+
+    });
+
+    console.log(angular.toJson(output));
+    }
+</xmp>
+
+        <h4><b>Step-3 : Create an Stylesheet file (mdba.css)</b></h4>
+        <xmp>
+table {
+border: 3px solid #4d4d4d;
+}
+
+thead,th {
+padding: 5px;
+border: 3px solid #000;
+text-align:center;
+}
+
+td, tr {
+text-align: center;
+padding: 5px;
+border: 1px solid;
+width: 15%;
+}
+        </xmp>
+
+    </div> <!--Code End-->
+
+
+
+    <hr />
+
+
+
+    <h3>Using PHP file to send data to mlab.</h3>
+    <br />
+
+    <div class="code">
+
+        <b>Step 1: Create a html file(index.html)</b>
+        <xmp>
+            <div>
+                <form action="insert.php" method="post">
+                    <input type="text" ng-model="fmname" name="fmname" /><br>
+                    <input type="text" ng-model="fmname1" name="fmname1" /><br>
+                    <input class="btn" type="submit" ng-click=login() />
+                </form>
+            </div>
+        </xmp>
+
+
+        <b>Step 2: Create a php file(<a href="phpfilesdownload/insert.php">insert.php</a></b>
+        <xmp>
+            <?php
+            if ($_POST) {
+            $url = "mongodb://Sriman:Sriman2389@ds161049.mlab.com:61049/srimandb";
+
+            $connection = new MongoClient($url);
+            $db = $connection->srimandb;
+            //$rec['text'] = $_POST['username'];
+
+            $username = $_POST['fmname'];
+            $username1 = $_POST['fmname1'];
+
+            $qry = array("text" => "$username","text1" => "$username1");
+
+            $db->sample->insert($qry);
+            }
+            ?>
+        </xmp>
+
+
+        <b>Step 3: Create a JS file(app.js)</b>
+        <xmp>
+            app.controller('CountryCtrl', function ($scope, $http) {
+            $scope.mesg = 'World';
+
+            $scope.login = function() {
+            var request = $http({
+            method : "post",
+            url  : "insert.php",
+            data : {
+            faname : $scope.fmname
+            },
+            });
+            }
+            });
+        </xmp>
+
+
+    </div>
+
+
+
+
+</div>

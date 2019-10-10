@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html ng-app="draft">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/lightbox.min.css" rel="stylesheet" />
+
+    <link href="../css/home.css" rel="stylesheet" />
+    <link href="../css/homedesign.css" rel="stylesheet" />
+
+    <style>
+        .c1 {
+            z-index: -1;
+            position: absolute;
+            opacity: 0.1;
+        }
+
+        .hometext {
+            font-size: 3em;
+            position: absolute;
+            z-index: 1;
+            left: 46%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="homescreen" ng-controller="startCtrl">
+        <section class="fadeIn animated">
+            <img src="../imgs/1.png" alt="c1" class="c1 hvr-sink" />
+            <div id="scene">
+                <ul>
+                    <li class="layer" data-depth="0.00"><img src="../imgs/p/1.png" alt="1" class="p1" /></li>
+                    <li class="layer" data-depth="0.40"><img src="../imgs/p/2.png" alt="2" class="p2" /></li>
+                    <li class="layer" data-depth="0.50"><img src="../imgs/p/3.png" alt="3" class="p3" /></li>
+                    <li class="layer" data-depth="0.60"><img src="../imgs/p/4.png" alt="4" class="p4" /></li>
+                    <li class="layer" data-depth="0.70"><img src="../imgs/p/5.png" alt="5" class="p5" /></li>
+                    <li class="layer" data-depth="0.80"><img src="../imgs/p/6.png" alt="6" class="p6" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/7.png" alt="7" class="p7" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/8.png" alt="8" class="p8" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/9.png" alt="9" class="p9" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/10.png" alt="10" class="p10" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/11.png" alt="11" class="p11" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/12.png" alt="12" class="p12" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/13.png" alt="13" class="p13" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/14.png" alt="14" class="p14" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/15.png" alt="15" class="p15" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/16.png" alt="16" class="p16" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/17.png" alt="17" class="p17" /></li>
+                    <li class="layer" data-depth="0.20"><img src="../imgs/p/18.png" alt="18" class="p18" /></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="col-md-12 text-center">
+            <div class="hometext">
+                <a href="../main.html">Enter</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-animate.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-sanitize.min.js"></script>
+
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+
+    <script src="../js/parallax.min.js"></script>
+    <!--<script src="//code.angularjs.org/1.2.26/angular.js"></script>
+    <script src="https://code.angularjs.org/1.2.26/angular-route.min.js"></script>-->
+    <script src="js/controller.js"></script>
+    <script src="js/route.js"></script>
+    <!--<script src="js/module.js"></script>-->
+
+</body>
+</html>

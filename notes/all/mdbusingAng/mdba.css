@@ -1,0 +1,7 @@
+﻿div .btn-primary {
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 1% !important;
+    border-radius: 10px;
+    border: 1px solid chocolate;
+}

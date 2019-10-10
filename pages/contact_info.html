@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>DRAFT2CODE</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        table {
+            border: 3px solid #4d4d4d;
+        }
+
+        thead, th {
+            padding: 5px;
+            border: 3px solid #000;
+            text-align: center;
+        }
+
+        td, tr {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid;
+            width: 15%;
+        }
+    </style>
+    </head>
+<body onload="getBooks()">
+    <div class="container">
+        <h3>Contact Data</h3>
+        <button>
+            <a href="../pages/contact_info.html">contact_info.html</a>
+        </button>
+        <br />
+
+        <div class="row">
+            <div id="books">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+
+
+        function getBooks() {
+            $.ajax({
+                url: "https://api.mlab.com/api/1/databases/contact_info/collections/contact?apiKey=511i2fMnEj2hNOlymaLpCLtDk-1G-NMx"
+            }).done(function (data) {
+                var output = '<div>';
+
+                output += '<div class"well">';
+                output += '<table>';
+                output += '<thead>';
+                output += '<tr>';
+                output += '<th> Name </th>';
+                output += '<th> Phone </th>';
+                output += '<th> Email </th>';
+                output += '<th> Message </th>';
+                output += '<tr>';
+                output += '</thead>';
+                output += '<tbody>';
+                output += '<tr>';
+                $.each(data, function (key, data) {
+                    output += '<tr>';
+                    output += '<td>' + data.name + '</td>';
+                    output += '<td>' + data.phone + '</td>';
+                    output += '<td>' + data.email + '</td>';
+                    output += '<td>' + data.message + '</td>';
+                    output += '</tr>';
+                });
+                output += '</tr>';
+                output += '</tbody>';
+                output += '</table>';
+                output += '</div>';
+
+
+                $('#books').html(output);
+
+            });
+
+            console.log(angular.toJson(output));
+        }
+    </script>
+</body>
+</html>

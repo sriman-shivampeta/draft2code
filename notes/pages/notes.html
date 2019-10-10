@@ -1,0 +1,620 @@
+﻿<link href="../css/contact.css" rel="stylesheet" />
+
+<div class="container_width">
+
+    <h2 class="text-center">Notes</h2>
+
+    <br />
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+
+        <!--Simple Calculator-->
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="?#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Simple Calculator
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5 col-md-offset-3">
+                            <div ng-controller="CalciCtrl">
+                                <p>
+                                    <input type="number" ng-model="a">
+                                    <input type="number" ng-model="b">
+                                    <select ng-model="operator">
+                                        <option>+</option>
+                                        <option>*</option>
+                                        <option>-</option>
+                                        <option>/</option>
+                                    </select>
+                                </p>
+
+                                <p><input placeholder="{{ result() }}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Curreny Convertor-->
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="?#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Currency Converter
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5 col-md-offset-3">
+                            <div class="panel panel-default" data-ng-controller="ConvertCtrl">
+                                <div class="panel-body">
+                                    <form action="" method="POST" role="form">
+                                        <legend>Currency Converter</legend>
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="">From</label>
+                                                <select ng-model="fromType" class="form-control" required data-ng-change="forExConvert()" ng-options="k for (k, v) in rates track by v">
+                                                    <option value="">--Select--</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="">To</label>
+                                                <select ng-model="toType" class="form-control" required data-ng-change="forExConvert()" ng-options="k for (k, v) in rates track by v">
+                                                    <option value="">--Select--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="">From Value</label>
+                                                <input type="number" class="form-control" placeholder="Enter value" data-ng-model="fromValue" data-ng-change="forExConvert()">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="">To Value</label>
+                                                <input type="text" class="form-control" placeholder="Enter value" data-ng-model="toValue" data-ng-change="forExConvert()">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--headingThree Code-->
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="?#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        How to create a simple active menu...
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+
+                    <b>HTML Code</b>
+                    <div class="code">
+                        <xmp>
+                            <body ng-app="app">
+                                <div ng:controller="NavigationController">
+                                    <p>
+                                        Your active menu item: <span class="highlightOne">{{states.activeItem}}</span>
+
+                                    </p>
+                                    <div>
+                                        Change the active menu item:
+                                        <input ng-model="states.activeItem" />
+                                    </div>
+                                    <ul class="navigation">
+                                        <li ng-repeat="item in items" class="item" ng-class="{'active': item.id == states.activeItem}" ng-click="states.activeItem=item.id">{{item.title}}</li>
+                                    </ul>
+                                </div>
+                            </body>
+                        </xmp>
+                    </div>
+
+                    <b>CSS Code</b>
+
+                    <div class="code">
+                        <xmp>
+
+                            ul.navigation li {
+                            background: #f6f6f6;
+                            padding: 10px;
+                            margin: 2px 0;
+                            display:inline-block;
+                            cursor: pointer;
+                            }
+                            ul.navigation li.active {
+                            background: blue;
+                            color: #f6f6f6;
+                            display: inline-block;
+                            padding: 10px;
+                            }
+                            .highlightOne {
+                            background: orange;
+                            font-size: 125%;
+                            margin: 5px;
+                            padding: 5px;
+                            }
+                            .navigation {
+                            display: block;
+                            background: #666;
+                            margin: 0 auto;
+                            text-align:center;
+                            padding: 10px;
+                            width: 17%;
+                            }
+                            p {
+                            margin: 10px 0 20px;
+                            }
+
+                        </xmp>
+                    </div>
+
+                    <h5>JS Code</h5>
+
+                    <div class="code">
+                        <xmp>
+                            var app = angular.module('app', []);
+
+                            app.controller('NavigationController', function ($scope) {
+                            // Must use a wrapper object, otherwise "activeItem" won't work
+                            $scope.states = {};
+                            $scope.states.activeItem = 'item1';
+                            $scope.items = [{
+                            id: 'item1',
+                            title: 'Home'
+                            }, {
+                            id: 'item290',
+                            title: 'Public Rooms'
+                            }, {
+                            id: 'item3',
+                            title: 'My Rooms'
+                            }];
+                            });
+
+                        </xmp>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--headingFour Code-->
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="?#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Creating a basic AngularJS website ?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                    <b>Add these links to the index.html</b>
+
+                    <div class="code">
+                        <xmp>
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <link rel="stylesheet" href="css/main.css">
+                            <link href="css/bootstrap.min.css" rel="stylesheet" />
+                            <link href="css/bootstrap-reboot.css" rel="stylesheet" />
+                        </xmp>
+                    </div>
+
+
+                    <b>Add these scripts to the end of the body tag</b>
+
+                    <div class="code">
+                        <xmp>
+                            <script src="js/bootstrap.min.js"></script>
+                            <script src="js/jquery-3.2.1.min.js"></script>
+                            <script src="//code.angularjs.org/1.2.26/angular.js"></script>
+                            <script src="https://code.angularjs.org/1.2.26/angular-route.min.js"></script>
+                            <script src="js/controller.js"></script>
+                            <script src="js/route.js"></script>
+                            <script src="js/module.js"></script>
+                        </xmp>
+                    </div>
+
+
+
+                    <b>Create a file name called route.js</b>
+
+                    <div class="code">
+                        <xmp>
+                            draft.config(['$routeProvider', '$locationProvider', (function ($routeProvider, $locationProvider) {
+
+                            $routeProvider.when('/', {
+                            templateUrl: 'pages/works.html',
+                            controller: 'TabController'
+                            })
+                            .when('/about', {
+                            templateUrl: 'pages/about.html',
+                            controller: 'MainCtrl'
+                            })
+                            .when('/contact', {
+                            templateUrl: 'pages/contact.html',
+                            controller: 'MainCtrl'
+                            })
+                            .otherwise({ redirectTo: '/' });
+                            //$locationProvider.html5Mode(true);
+
+                            })]);
+
+                        </xmp>
+                    </div>
+
+                    <b>These route.js file are used to locate the path to the subpages (i.e. when we use the website with multiple pages)</b>
+                    <b>Next Create the file called controller.js</b>
+
+                    <div class="code">
+                        <xmp>
+                            var draft = angular.module('draft', ['ngRoute']);
+
+                            draft.controller('MainCtrl', function ($scope, $location, $route) {
+                            $scope.activePath = null;
+                            $scope.$on('$routeChangeSuccess', function () {
+                            $scope.activePath = $location.path();
+                            console.log($location.path());
+                            });
+                            });
+
+                            draft.controller('TabController', function () {
+                            this.tab = 1;
+
+                            this.selectTab = function (setTab) {
+                            this.tab = setTab;
+                            };
+                            this.isSelected = function (checkTab) {
+                            return this.tab === checkTab;
+                            };
+                            });
+
+                        </xmp>
+                    </div>
+
+                    <b>This code is used to make the menu link active</b>
+
+                    <div class="code">
+                        <xmp>
+                            $scope.activePath = null;
+                            $scope.$on('$routeChangeSuccess', function () {
+                            $scope.activePath = $location.path();
+                            console.log($location.path());
+                            });
+
+                        </xmp>
+                    </div>
+
+
+                    <b>To display the gallery with the menu category</b>
+
+                    <div class="code">
+                        <xmp>
+                            draft.controller('TabController', function () {
+                            this.tab = 1;
+
+                            this.selectTab = function (setTab) {
+                            this.tab = setTab;
+                            };
+                            this.isSelected = function (checkTab) {
+                            return this.tab === checkTab;
+                            };
+                            });
+
+                        </xmp>
+                    </div>
+
+
+                    <b>Before using the above code in the controller write the below code in the html page.</b>
+
+                    <div class="code">
+                        <xmp>
+                            <section ng-controller="TabController as slide">
+                                <ul>
+                                    <li ng-class="{active: slide.isSelected(1) }">
+                                        <a href ng-click="slide.selectTab(1)">All</a>
+                                    </li> |
+                                    <li ng-class="{active: slide.isSelected(2) }">
+                                        <a href ng-click="slide.selectTab(2)">Graphics</a>
+                                    </li> |
+                                    <li ng-class="{active: slide.isSelected(3) }">
+                                        <a href ng-click="slide.selectTab(3)">Websites</a>
+                                    </li>
+                                </ul>
+                                <br />
+
+                                <div class="row" ng-show="slide.isSelected(1)">
+                                    <div class="slides col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        Slide1
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" ng-show="slide.isSelected(2)">
+                                    <div class="slides">
+                                        Slide2
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" ng-show="slide.isSelected(3)">
+                                    <div class="slides">
+                                        Slide3
+                                    </div>
+                                </div><br />
+
+                            </section>
+
+                        </xmp>
+                    </div>
+
+
+                    <b>To display the subpages, we have to create a tag</b>
+
+                    <div class="code">
+                        <xmp>
+                            <div ng-view></div>
+                        </xmp>
+                    </div>
+
+                    <b>To create an active menu</b>
+
+                    <div class="code">
+                        <xmp>
+                            <ul>
+                                <li ng-class="{active: $route.current.activetab == '/'}"><a class="topbar_slide" ng-class="{ active: activePath=='/' }" href="#/">Works</a></li>
+                                <li ng-class="{active: $route.current.activetab == '/about'}"><a class="topbar_slide" ng-class="{ active: activePath=='/about' }" href="#/about">About</a></li>
+                                <li ng-class="{active: $route.current.activetab == '/contact'}">
+                                <a class="topbar_slide" ng-class="{ active: activePath=='/contact' }" href="#/contact">Contact</a></li>
+                                </ul>
+                            </xmp>
+                    </div>
+
+                    <b>
+                        <div class="code"><xmp><li ng-class="{active: $route.current.activetab == '/'}"></li> this tag is used to display and route the content.</xmp></div>
+                        <div class="code"><xmp><a class="topbar_slide" ng-class="{ active: activePath=='/' }" href="#/"></a> this tag is used to make menu active with color.</xmp></div>                        
+                    </b>
+                    <b>When we use the above tags, this script have to written in the controller.js</b>
+                    
+                    <div class="code">
+                        <xmp>
+                            $scope.activePath = null;
+                            $scope.$on('$routeChangeSuccess', function () {
+                            $scope.activePath = $location.path();
+                            console.log($location.path());
+                            });
+
+                        </xmp>
+                    </div>
+
+
+                    <b>To make the menu active use the below code</b>
+
+                    <div class="code">
+                        <xmp>
+                            .active {
+                            color: #f10027 !important;
+                            border-top: 1px solid #f10027;
+                            }
+
+                            .active:hover {
+                            border-top: 1px solid #2D87C6;
+                            }
+                            .d_menu li {
+                            list-style-type: none;
+                            padding: 10% 0%;
+                            font-size: 1.5em;
+                            }
+
+                            .d_menu ul li a {
+                            font-family: "Roboto-Medium";
+                            /* display: block; */
+                            padding: 5px;
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-size: 1.2em;
+                            font-weight: 700;
+                            /* text-align: right !important; */
+                            }
+
+                        </xmp>
+                    </div>
+
+                    <b>To make the border top with animation horizontal out shutter</b>
+
+                    <div class="code">
+                        <xmp>
+                            /* Shutter Out Horizontal */
+                            .topbar_slide {
+                            position: relative;
+                            width: 100%;
+                            height: 75px;
+                            display: inline-block;
+                            text-align: center;
+                            -webkit-transition: all 0.25s ease-in-out;
+                            transition: all 0.25s ease-in-out;
+                            text-decoration: none;
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            }
+                            .topbar_slide:after {
+                            position: absolute;
+                            top: 0;
+                            height: 4px;
+                            left: 50%;
+                            right: 50%;
+                            background: #c0392b;
+                            content: '';
+                            }
+                            .topbar_slide:before,
+                            .topbar_slide:after {
+                            -webkit-transition: all 0.25s ease-in-out;
+                            transition: all 0.25s ease-in-out;
+                            }
+                            .topbar_slide:hover,
+                            .topbar_slide:active,
+                            .topbar_slide.hover {
+                            color: #000;
+                            }
+                            .topbar_slide:hover:after,
+                            .topbar_slide:active:after,
+                            .topbar_slide.hover:after {
+                            left: 0;
+                            right: 0;
+                            }
+
+                        </xmp>
+                    </div>
+
+                    <b>To display the gallery with ng-repeat</b>
+                    <b>In html page</b>
+
+                    <div class="code">
+                        <xmp>
+                            <link href="css/bootstrap-image-gallery.min.css" rel="stylesheet" />
+                            <link href="css/blueimp-gallery.min.css" rel="stylesheet" />
+
+                            <script src="js/jquery.blueimp-gallery.min.js"></script>
+                            <script src="js/bootstrap-image-gallery.min.js"></script>
+
+                            <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+                                <!-- The container for the modal slides -->
+                                <div class="slides"></div>
+                                <!-- Controls for the borderless lightbox -->
+                                <h3 class="title"></h3>
+                                <a class="prev">‹</a>
+                                <a class="next">›</a>
+                                <a class="close">×</a>
+                                <a class="play-pause"></a>
+                                <ol class="indicator"></ol>
+                                <!-- The modal dialog, which will be used to wrap the lightbox content -->
+                                <div class="modal fade">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title"></h4>
+                                            </div>
+                                            <div class="modal-body next"></div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default pull-left prev">
+                                                    <i class="glyphicon glyphicon-chevron-left"></i>
+                                                    Previous
+                                                </button>
+                                                <button type="button" class="btn btn-primary next">
+                                                    Next
+                                                    <i class="glyphicon glyphicon-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" id="links">
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" ng-repeat="image in images">
+                                    <a title="{{image.title}}" ng-href="{{image.img_link}}" data-gallery>
+                                        <img class="img_effect col-md-12" alt="" ng-src="http://localhost:55370/../imgs/pic/{{image.img_preview}}">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </xmp>
+                    </div>
+
+                    <b>In controller</b>
+
+                    <div class="code">
+                        <xmp>
+                            $scope.images = [
+                            {
+                            title: '1',
+                            img_preview: '1.jpg',
+                            img_link: '../imgs/pic/1.jpg'
+                            },
+                            {
+                            title: '2',
+                            img_preview: '2.jpg',
+                            img_link: '../imgs/pic/2.jpg'
+                            },
+                            {
+                            title: '3',
+                            img_preview: '3.jpg',
+                            img_link: '../imgs/pic/3.jpg'
+                            },
+                            {
+                            title: '4',
+                            img_preview: '4.jpg',
+                            img_link: '../imgs/pic/4.jpg'
+                            },
+                            ];
+
+                        </xmp>
+                    </div>
+
+                    <b></b>
+
+                    <div class="code">
+                        <xmp>
+                        </xmp>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--Sample Code For Accordian-->
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="?#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Question
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    Content
+                </div>
+            </div>
+        </div>
+
+
+    </div><!-- panel-group -->
+
+
+
+
+</div>

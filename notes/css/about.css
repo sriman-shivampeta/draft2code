@@ -1,0 +1,51 @@
+.about_content p {
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+.about_heading {
+    text-align: center;
+    font-size: 2.2em;
+    padding: 1em;
+}
+
+
+#bio, #skill, #exp {
+    width: 100%;
+    height: auto;
+    position: relative;
+    -webkit-animation: aniright 0.7s;
+    -moz-animation: aniright 0.7s;
+    animation: aniright 0.7s;
+}
+
+@-webkit-keyframes aniright {
+  0%   { right: -100px; }
+  100% { right: 0; }
+}
+
+@-moz-keyframes aniright {
+  0%   { right: -100px; }
+  100% { right: 0; }
+}
+
+@keyframes aniright {
+  0%   { right: -100px; }
+  100% { right: 0; }
+}
+
+.skills_tab {
+    margin-bottom: 5%;
+}
+
+    .skills_tab ul li {
+        display: inline-block;
+        margin: 0% 3%;
+        font-size: 1.3em;
+    }
+
+.about_imgs p {
+    text-align: center;
+    margin-top: 1%;
+}

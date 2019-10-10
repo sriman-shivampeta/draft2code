@@ -1,0 +1,57 @@
+﻿<link href="../css/about.css" rel="stylesheet" />
+
+<div class="container_width">
+
+    <p class="about_heading fadeInDown">Who am i ?</p>
+
+
+    <div class="skills_tab" ng-controller="SkillsCtrl as skill">
+        <ul>
+            <li ng-class="{active: skill.isSelected(1) }">
+                <a href ng-click="skill.selectTab(1)">Bio</a>
+            </li> |
+            <li ng-class="{active: skill.isSelected(2) }">
+                <a href ng-click="skill.selectTab(2)">Skills</a>
+            </li> |
+            <li ng-class="{active: skill.isSelected(3) }">
+                <a href ng-click="skill.selectTab(3)">Experience</a>
+            </li>
+        </ul>
+        <br />
+
+        <div class="row" id="bio" ng-show="skill.isSelected(1)">
+            <div class="about_content">
+                <p>
+                    I am user experience designer and developer with knowledge in html, css, bootstrap, angularjs and basic fundamentals of javascript, jquery, mongodb, passionate about communication and human interaction putting user in the center and create innovative and intuitive design to development, seeking a challenging position and willing to learn that reflects my experience, skills and personal attributes including dedication, meeting goals, creativity and the ability to follow through.
+                </p>
+            </div>
+        </div>
+
+        <div class="row" id="skill" ng-show="skill.isSelected(2)">
+            
+
+
+        </div>
+
+        <div class="row" id="exp" ng-show="skill.isSelected(3)">
+            <div class="about_content">
+                <p>
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="about_heading">What I Do ?</p>
+
+    <div class="row about_imgs" ng-controller="SkillsImgCtrl">
+
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6" ng-repeat="ski_img in skill_img">
+            <img class="img-responsive" src="{{ski_img.skill_img_preview}}" />
+            <p>{{ski_img.skill_title}}</p>
+        </div>
+    </div>
+
+
+</div>

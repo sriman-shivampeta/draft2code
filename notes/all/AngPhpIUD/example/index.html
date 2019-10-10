@@ -1,0 +1,82 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>Data - (Insert,Display,Update,Delete)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+    <script type="text/javascript" src="ang.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style>
+.form_0{
+    margin: 0 auto;
+    text-align: center;
+    margin: 30px;
+}
+.table_0{
+    border: 1px solid;
+    margin: 0 auto;
+    font-size: 20px;
+}
+    </style>
+</head>
+<body>
+
+    <div ng-app="myApp" ng-controller="cntrl">
+        <div class="form_0">
+            <label>Search: <input ng-model="searchText"></label>
+            <form action="insert.php" method="post">
+
+                Student Name:
+                <select ng-model="name"><option ng-repeat="name in condata.names">{{name}}</option></select>
+                Student Email:
+                <select ng-model="email"><option ng-repeat="email in condata.emails">{{email}}</option></select>
+                Student Mess:
+                <select ng-model="mess"><option ng-repeat="mess in condata.mess">{{mess}}</option></select>
+                Student Mob: <input type="number" ng-model="mob" name="id">
+
+                <button class="btn btn-default" type="button" ng-click="insertdata()">{{btnName}}</button>
+
+
+            </form>
+            {{msg}}
+
+        </div>
+
+        <div class="container table-responsive">
+            <table class="table table-condensed table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th style="text-align:center;width: 5%;">ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mess</th>
+                        <th>Mob</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="student in data | filter:searchText">
+                        <td style="text-align:center;">{{student.id}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.email}}</td>
+                        <td>{{student.mess}}</td>
+                        <td>{{student.mob}}</td>
+                        <td style="text-align:center;width:2%;"><button class="btn btn-danger" ng-click="deleteStud(student.id);">Delete</button></td>
+                        <td style="text-align:center;width:2%;"><button class="btn btn-warning" ng-click="editStud(student.id, student.name);">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>
