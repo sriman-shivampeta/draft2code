@@ -1,0 +1,121 @@
+﻿.brand{
+    display:none;
+}
+.homecontentdesign img {
+    top: 12%;
+    width: 30%;
+    margin: 0 auto;
+    position: fixed;
+    left: 33%;
+}
+@font-face {
+    font-family: 'LAIKA';
+    src: url('../fonts/LAIKA.otf') format('opentype');
+}
+/*ColorPage*/
+.colorpage {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+.colorpage img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  z-index:-100;
+}
+
+div {
+  height: 100%;
+}
+div .bg{  
+}
+.content1 {
+	padding-top: 30%;
+}
+article {
+  text-align:center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+  position:absolute;
+}
+
+/* Pattern styles */
+.container {
+  display: table;
+  width: 100%;
+}
+
+.left-half {
+    color:white;
+  background-image:url('../images/bg.png');
+  background-size:cover;
+  overflow:auto;
+    filter:drop-shadow(-2px 0px 4px #fff);
+	position: absolute;
+	left: 0%;
+	width: 5%;
+	-webkit-transform: skew(0deg);
+	-moz-transform: skew(0deg);
+	-o-transform: skew(0deg);
+	transition:all 0.3s ease;
+}
+/*.left-half:hover {
+  background-color: #ff9e2c;
+  left: 0%;
+  width: 95%;
+  z-index:2;
+}*/
+.right-half {
+    color:white;
+	     background-image:url('../images/bg.png');
+  background-size:cover;
+    filter:drop-shadow(2px 0px 4px #fff);
+  position: absolute;
+  right: 0%;
+  width: 5%;
+  transition:all 0.3s ease;
+}
+/*.right-half:hover {
+	background-color: #b6701e;
+	right: 0%;
+	width: 95%;
+  z-index:2;
+}*/
+
+.designtext{
+    font-size:50px;
+}
+.designtext span:hover{
+    color:white;
+}
+
+.magictime.swashIn {
+-webkit-animation-duration: 10s;
+-moz-animation-duration: 10s;
+-o-animation-duration: 10s;
+animation-duration: 2s;
+animation-iteration-count:infinite;
+ animation-direction: alternate;
+}
+
+
+.homepagecontent {
+	top: 72%;
+	position: relative;
+	padding: 10%;
+	font-family: LAIKA;
+}
+
+/*HomeText*/
+

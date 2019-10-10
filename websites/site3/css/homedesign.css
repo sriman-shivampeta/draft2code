@@ -1,0 +1,40 @@
+.home{
+    height:800px;
+}
+.disable-selection {
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer */
+	-khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+	-webkit-user-select: none; /* Chrome, Safari, and Opera */
+	-webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+
+.layer{position: absolute;}
+#scene{
+	-webkit-filter: blur(2px);
+-moz-filter: blur(2px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(2px);
+}
+
+.p1 {margin: 10% 10%;}
+.p2 {margin: 440px 0px 0px 540px;}
+.p3 {margin: 300px 0px 0px 700px;}
+.p4 {margin: 410px 0px 0px 110px;}
+.p5 {margin: 90px 0px 0px 1220px;}
+.p6 {margin: 500px 0px 0px 1050px;}
+.p7 {margin: 170px 0px 0px 410px;}
+.p8 {margin: 560px 0px 0px 480px;}
+.p9 {margin: 560px 0px 0px 1280px;}
+.p10 {margin: 590px 0px 0px 680px;}
+.p11 {margin: 310px 0px 0px 1020px;}
+.p12 {margin: 560px 0px 0px 860px;}
+.p13 {margin: 170px 0px 0px 870px;}
+.p14 {margin: 290px 0px 0px 1410px;}
+.p15 {margin: 350px 0px 0px 70px;}
+.p16 {margin: 470px 0px 0px 1370px;}
+.p17 {margin: 39px 0px 0px 370px;}
+.p18 {margin: 39px 0px 0px 690px;}
+

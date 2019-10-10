@@ -1,0 +1,68 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Allan);
+
+body{
+    background-color:3ddad7;
+    background-image:url(../images/cbg.png);
+    width:100%;
+    background-size:cover;
+}
+
+.contact{
+    width:60%;
+    margin:0 auto;
+}
+
+label {
+    font-size: 1rem;
+    padding:1% 0%;
+}
+
+input[type]{
+    border:2px solid #000;
+    background-color:transparent;
+    color:#333;
+    padding:6px;
+}
+textarea[type]{
+    border:2px solid #000;
+}
+textarea[type]:focus{
+    border:0.2px solid #000;
+}
+input[type=date]:focus:not([readonly]),input[type=datetime-local]:focus:not([readonly]),input[type=email]:focus:not([readonly]),input[type=number]:focus:not([readonly]),input[type=password]:focus:not([readonly]),input[type=search-md]:focus:not([readonly]),input[type=search]:focus:not([readonly]),input[type=tel]:focus:not([readonly]),input[type=text]:focus:not([readonly]),input[type=time]:focus:not([readonly]),input[type=url]:focus:not([readonly]),textarea.md-textarea:focus:not([readonly]) {
+	border-bottom:transparent;
+	box-shadow:0 3px 0 0 #000;
+    outline-color:transparent;
+    border:transparent;
+    background-color:#333;
+    color:#fff;
+    padding:6px;
+}
+
+.form-control:focus {
+    border:2px solid #000;
+	border-color:#000;
+	outline:-150px;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    background-color:#333;
+    padding:6px;
+    color:#fff;
+}
+
+.submit_btn {
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 4px solid #333333;
+    padding: 1% 5%;
+    background-color:transparent;
+    color:#333333;
+    transition:all 0.3s ease-in-out;
+}
+
+.submit_btn:hover {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color:#333333;
+    color:#ffffff;
+}

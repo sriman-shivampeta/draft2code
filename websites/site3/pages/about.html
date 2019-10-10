@@ -1,0 +1,85 @@
+<link href="../css/about.css" rel="stylesheet" />
+
+<div class="about fadeIn animated" ng-controller="aboutController">
+	<h1 class="text-center">About</h1>
+	
+	<!--<p>{{ message }}</p>-->
+
+    <div class="container">
+        <div class="col-md-6 col-md-offset-1">
+            <nav class="site-nav">
+                <a class="nav-link" ng-click="bio();">Bio</a>
+                <a class="nav-link" ng-click="skills();">Skills</a>
+                <a class="nav-link" ng-click="exp();">Experience</a>
+            </nav>
+
+            <div class="bio_group fadeIn animated" ng-show="showbio">
+                <p>Who I Am ?</p>
+
+            </div>
+            <div class="skills_group fadeIn animated" ng-show="showskills" ng-controller="about1Ctrl">
+                    <div class="row">
+                        <div class="col-md-7 sg_name">HTML5</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress  progress-bar-info html"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 sg_name">CSS3</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress css"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 sg_name">Bootstrap</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress bootstrap"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 sg_name">JQuery</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress jquery"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 sg_name">Javascript</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress javascript"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 sg_name">AngularJS</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress angularjs"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 sg_name">Adobe Dreamweaver CS6</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress dw"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 sg_name">Adobe Photoshop CS6</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress ps"></div></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 sg_name">Adobe Illustrator CS6</div>
+                        <div class="col-md-4"><div class="skill_bar"><div class="skill_bar_progress il"></div></div></div>
+                    </div>
+            </div>
+            <div class="exp_group fadeIn animated" ng-show="showexp">
+                <p></p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+<style>
+    .skill_bar {
+  width:300px;
+  height:10px;
+  background:transparent;
+  margin-bottom:5px;
+  margin-top:12px;
+}
+
+.skill_bar_progress {
+  width:0%;
+  height:100%;
+  background:#00f;
+}
+
+</style>
